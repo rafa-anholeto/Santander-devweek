@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Table(name = "tab_correntista")
 public class Correntista {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(length = 20)

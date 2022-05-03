@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class Movimentacao {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "data_hora")
     private LocalDateTime dataHora;
@@ -27,5 +27,8 @@ public class Movimentacao {
 
     @Enumerated(EnumType.STRING)
     private MovimentacaoTipo tipo;
+
+    @Column(name = "id_conta")
+    private Integer idConta;
 
 }
