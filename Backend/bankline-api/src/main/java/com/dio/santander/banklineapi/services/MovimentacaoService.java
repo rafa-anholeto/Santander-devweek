@@ -6,7 +6,6 @@ import com.dio.santander.banklineapi.model.Movimentacao;
 import com.dio.santander.banklineapi.model.MovimentacaoTipo;
 import com.dio.santander.banklineapi.repository.CorrentistaRepository;
 import com.dio.santander.banklineapi.repository.MovimentacaoRepository;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
