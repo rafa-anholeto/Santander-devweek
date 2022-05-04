@@ -20,6 +20,7 @@ public class MovimentacaoService {
 
     public void save(MovimentacaoDTO movimentacaoDTO){
         Movimentacao movimentacao = new Movimentacao();
+
         Double valor = movimentacaoDTO.getValor();
         if(movimentacaoDTO.getTipo() == MovimentacaoTipo.DESPESA)
             valor = valor * -1;
@@ -31,10 +32,11 @@ public class MovimentacaoService {
         movimentacao.setValor(valor);
 
         Correntista correntista = correntistaRepository.findById(movimentacaoDTO.getIdConta()).orElse(null);
-        if(correntista != null){
+        if(correntista != null) {
             correntista.getConta().setSaldo(correntista.getConta().getSaldo() + valor);
             correntistaRepository.save(correntista);
         }
+
         movimentacaoRepository.save(movimentacao);
 
     }
