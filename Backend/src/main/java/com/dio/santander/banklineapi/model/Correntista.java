@@ -22,7 +22,7 @@ public class Correntista {
     private String cpf;
 
     @Column(length = 60)
-    private String name;
+    private String nome;
 
     @Embedded
     private Conta conta;
